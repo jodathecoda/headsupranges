@@ -37,7 +37,7 @@ R6=Radiobutton(root, text="3x", variable=bigblinds, value=12, command=call)
 R6.grid(row=3, column=0, sticky=N+E)
 
 # A canvas for mouse events and image drawing
-canvas = Canvas(root, height=330, width=330,)
+canvas = Canvas(root, height=455, width=455,)
 canvas.grid(column=5, row=0, rowspan=6, sticky=W)
 canvas.create_image((2, 2), image=hu3x_img, anchor=NW)
 
