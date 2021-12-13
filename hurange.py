@@ -5,7 +5,8 @@ from PIL import ImageTk,Image
 global cwd
 cwd = os.getcwd()
 
-root = Tk() 
+root = Tk()
+root.title('1/4pot=17%  1/2pot=25%  1pot=33%  1.5pot=37.5%  2pot=40%')
 
 hu2x_img                    = ImageTk.PhotoImage(Image.open(cwd + "\\ranges\\slumbot2x.png"))
 pushfold_img                = ImageTk.PhotoImage(Image.open(cwd + "\\ranges\\pushfold.png"))
@@ -35,6 +36,8 @@ R5=Radiobutton(root, text="2x", variable=bigblinds, value=11, command=call)
 R5.grid(row=2, column=0, sticky=N+E)
 R6=Radiobutton(root, text="3x", variable=bigblinds, value=12, command=call)
 R6.grid(row=3, column=0, sticky=N+E)
+#L1=Label(text="hello")
+#L1.grid(row=4, column=0, sticky=N+E)
 
 # A canvas for mouse events and image drawing
 canvas = Canvas(root, height=455, width=455,)
