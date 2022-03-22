@@ -11,7 +11,7 @@ root.title('1/4pot=17%  1/2pot=25%  1pot=33%  1.5pot=37.5%  2pot=40%')
 hu2x_img                    = ImageTk.PhotoImage(Image.open(cwd + "\\ranges\\slumbot2x.png"))
 pushfold_img                = ImageTk.PhotoImage(Image.open(cwd + "\\ranges\\pushfold.png"))
 hu3x_img                    = ImageTk.PhotoImage(Image.open(cwd + "\\ranges\\slumbot3x.png"))
-maniac_img                  = ImageTk.PhotoImage(Image.open(cwd + "\\ranges\\maniac.png")) 
+custom_img                  = ImageTk.PhotoImage(Image.open(cwd + "\\ranges\\custom.png")) 
 
 # A Radiobutton to toggle between images
 bigblinds = IntVar()
@@ -26,7 +26,7 @@ def call():
     elif bigblinds.get() == 12:
         canvas.create_image((2, 2), image=hu3x_img, anchor=NW)
     elif bigblinds.get() == 13:
-        canvas.create_image((2, 2), image=maniac_img, anchor=NW)
+        canvas.create_image((2, 2), image=custom_img, anchor=NW)
     else:
         pass      
 
