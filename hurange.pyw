@@ -34,13 +34,13 @@ def call():
 #Description
 #L1=Label(root, text ="R=raise  G=call  B=fold").grid(row=0, column=0, columnspan=5, sticky=S)
 #Big blinds selection
-R4=Radiobutton(root, text="s", variable=bigblinds, value=10, command=call)
+R4=Radiobutton(root, text="push/fols10bb", variable=bigblinds, value=10, command=call)
 R4.grid(row=1, column=0, sticky=N+E)
-R5=Radiobutton(root, text="m", variable=bigblinds, value=11, command=call)
+R5=Radiobutton(root, text="open3x,2x,limp", variable=bigblinds, value=11, command=call)
 R5.grid(row=2, column=0, sticky=N+E)
-R6=Radiobutton(root, text="p", variable=bigblinds, value=12, command=call)
+R6=Radiobutton(root, text="defend range", variable=bigblinds, value=12, command=call)
 R6.grid(row=3, column=0, sticky=N+E)
-R7=Radiobutton(root, text="o", variable=bigblinds, value=13, command=call)
+R7=Radiobutton(root, text="defend frequ", variable=bigblinds, value=13, command=call)
 R7.grid(row=4, column=0, sticky=N+E)
 #L1=Label(text="hello")
 #L1.grid(row=4, column=0, sticky=N+E)
