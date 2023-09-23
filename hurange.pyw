@@ -7,7 +7,7 @@ cwd = os.getcwd()
 
 root = Tk()
 root.iconbitmap("hud_icon_small.ico")
-root.title('1/4pot=17%  1/2pot=25%  1pot=33%  1.5pot=37.5%  2pot=40%')
+root.title('FLOPbet: 2.3 --- TURNbet: 5 --- RIVER bet: ALL-IN')
 
 hu2x_img                    = ImageTk.PhotoImage(Image.open(cwd + "\\ranges\\slumbot2x.png"))
 pushfold_img                = ImageTk.PhotoImage(Image.open(cwd + "\\ranges\\pushfold.png"))
