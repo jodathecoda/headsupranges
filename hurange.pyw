@@ -63,7 +63,7 @@ R8=Radiobutton(root, text="bb_vs_utg", variable=bigblinds, value=8, command=call
 R8.grid(row=8, column=0, sticky=N+E)
 
 # A canvas for mouse events and image drawing
-canvas = Canvas(root, height=455, width=455,)
+canvas = Canvas(root, height=320, width=320,)
 canvas.grid(column=5, row=0, rowspan=6, sticky=W)
 canvas.create_image((2, 2), image=bb_vs_btn, anchor=NW)
 
