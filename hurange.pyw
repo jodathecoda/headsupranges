@@ -46,26 +46,29 @@ def call():
 
 #Description
 R1=Radiobutton(root, text="UG", variable=bigblinds, value=1, command=call)
-R1.grid(row=1, column=0, sticky=N+E)
+R1.grid(row=0, column=0, sticky=N+E)
 R2=Radiobutton(root, text="HJ", variable=bigblinds, value=2, command=call)
-R2.grid(row=2, column=0, sticky=N+E)
+R2.grid(row=1, column=0, sticky=N+E)
 R3=Radiobutton(root, text="CO", variable=bigblinds, value=3, command=call)
-R3.grid(row=3, column=0, sticky=N+E)
+R3.grid(row=2, column=0, sticky=N+E)
 R4=Radiobutton(root, text="DB", variable=bigblinds, value=4, command=call)
-R4.grid(row=4, column=0, sticky=N+E)
+R4.grid(row=3, column=0, sticky=N+E)
 R5=Radiobutton(root, text="SB", variable=bigblinds, value=5, command=call)
-R5.grid(row=5, column=0, sticky=N+E)
-R6=Radiobutton(root, text="push-fold", variable=bigblinds, value=6, command=call)
-R6.grid(row=6, column=0, sticky=N+E)
+R5.grid(row=4, column=0, sticky=N+E)
+R6=Radiobutton(root, text="PF", variable=bigblinds, value=6, command=call)
+R6.grid(row=5, column=0, sticky=N+E)
+
+'''
 R7=Radiobutton(root, text="bb_vs_btn", variable=bigblinds, value=7, command=call)
 R7.grid(row=7, column=0, sticky=N+E)
 R8=Radiobutton(root, text="bb_vs_utg", variable=bigblinds, value=8, command=call)
 R8.grid(row=8, column=0, sticky=N+E)
+'''
 
 # A canvas for mouse events and image drawing
-canvas = Canvas(root, height=320, width=320,)
+canvas = Canvas(root, height=320, width=385,)
 canvas.grid(column=5, row=0, rowspan=6, sticky=W)
-canvas.create_image((2, 2), image=bb_vs_btn, anchor=NW)
+canvas.create_image((2, 2), image=pushfold_img, anchor=NW)
 
 # Enter event loop
 root.mainloop()
