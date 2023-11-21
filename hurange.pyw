@@ -1,6 +1,7 @@
 import os
 from tkinter import *
-from PIL import ImageTk,Image  
+from PIL import ImageTk,Image
+import random
 
 global cwd
 cwd = os.getcwd()
@@ -42,7 +43,11 @@ def call():
     elif bigblinds.get() == 8:
         canvas.create_image((2, 2), image=bb_vs_utg, anchor=NW)
     else:
-        pass      
+        pass
+
+def randomizer():
+    rnd = random.randint(1,100)
+    R7['text'] = str(rnd)[0:5] + "%"
 
 #Description
 R1=Radiobutton(root, text="UG", variable=bigblinds, value=1, command=call)
@@ -57,18 +62,15 @@ R5=Radiobutton(root, text="SB", variable=bigblinds, value=5, command=call)
 R5.grid(row=4, column=0, sticky=N+E)
 R6=Radiobutton(root, text="PF", variable=bigblinds, value=6, command=call)
 R6.grid(row=5, column=0, sticky=N+E)
+R7=Button(root, text="RD", command = lambda: randomizer())
+R7.grid(row=6, column=0, rowspan=6,sticky=N+E)
 
-'''
-R7=Radiobutton(root, text="bb_vs_btn", variable=bigblinds, value=7, command=call)
-R7.grid(row=7, column=0, sticky=N+E)
-R8=Radiobutton(root, text="bb_vs_utg", variable=bigblinds, value=8, command=call)
-R8.grid(row=8, column=0, sticky=N+E)
-'''
 
 # A canvas for mouse events and image drawing
 canvas = Canvas(root, height=320, width=385,)
-canvas.grid(column=5, row=0, rowspan=6, sticky=W)
-canvas.create_image((2, 2), image=pushfold_img, anchor=NW)
+canvas.grid(column=1, row=0, rowspan=6, sticky=W)
+#canvas.create_image((2, 2), image=pushfold_img, anchor=NW)
+canvas.create_image((0, 1), image=pushfold_img, anchor=NW)
 
 # Enter event loop
 root.mainloop()
